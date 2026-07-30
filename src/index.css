@@ -1,0 +1,456 @@
+@import "tailwindcss";
+
+@theme {
+  --color-neon: #fb923c;
+  --color-neon-dark: #f97316;
+  --color-bg-dark: #0a0a0a;
+  --color-card-dark: #121212;
+  --color-border-dark: #1e293b;
+  --color-text-main: #f8fafc;
+  --color-text-muted: #a1a1aa;
+}
+
+/* ================================================================
+   GLOBAL STYLES — Om Yadav Portfolio
+   ================================================================
+   Design System: Premium SaaS + Glassmorphism
+   All colors, spacing, and typography tokens defined as CSS 
+   custom properties. Components MUST use variables — never raw hex.
+   ================================================================ */
+
+/* ----------------------------------------------------------------
+   1. COLOR TOKENS
+   ---------------------------------------------------------------- */
+:root {
+  /* Core palette (Legacy mapping to Bianca Style Redesign - Dark) */
+  --bg-primary:       #0a0a0a;
+  --bg-surface:       #121212;
+  --bg-card:          #161616;
+  --color-primary:    #fb923c;
+  --color-secondary:  #f97316;
+  --color-accent:     #fb923c;
+  --color-highlight:  #fb923c;
+  --color-border:     #1e293b;
+  --color-border-glow:#fb923c;
+  --text-primary:     #F8FAFC;
+  --text-muted:       #8A9E97;
+  --glow-primary:     rgba(251, 146, 60, 0.18);
+  --glow-accent:      rgba(249, 115, 22, 0.14);
+  --glow-bg:          rgba(251, 146, 60, 0.07);
+
+  /* Backwards compatibility for other components */
+  --background:    var(--bg-primary);
+  --surface:       var(--bg-surface);
+  --primary:       var(--color-primary);
+  --secondary:     var(--color-secondary);
+  --accent:        var(--color-accent);
+  --border:        var(--color-border);
+  --text:          var(--text-primary);
+
+  /* Legacy derived / semantic rgb placeholders */
+  --primary-rgb:    251, 146, 60;
+  --secondary-rgb:  249, 115, 22;
+  --accent-rgb:     251, 146, 60;
+  --surface-rgb:    18, 18, 18;
+  --background-rgb: 10, 10, 10;
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, var(--primary), var(--secondary));
+  --gradient-accent:  linear-gradient(135deg, var(--accent), var(--primary));
+
+  /* ----------------------------------------------------------------
+     2. SPACING SCALE  (base 4px)
+     ---------------------------------------------------------------- */
+  --space-xs:   0.25rem;   /*  4px */
+  --space-sm:   0.5rem;    /*  8px */
+  --space-md:   1rem;      /* 16px */
+  --space-lg:   1.5rem;    /* 24px */
+  --space-xl:   2rem;      /* 32px */
+  --space-2xl:  3rem;      /* 48px */
+  --space-3xl:  4rem;      /* 64px */
+  --space-4xl:  6rem;      /* 96px */
+
+  /* ----------------------------------------------------------------
+     3. TYPOGRAPHY
+     ---------------------------------------------------------------- */
+  --font-family:   'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-size-xs:   0.75rem;   /* 12px */
+  --font-size-sm:   0.875rem;  /* 14px */
+  --font-size-base: 1rem;      /* 16px */
+  --font-size-md:   1.125rem;  /* 18px */
+  --font-size-lg:   1.25rem;   /* 20px */
+  --font-size-xl:   1.5rem;    /* 24px */
+  --font-size-2xl:  2rem;      /* 32px */
+  --font-size-3xl:  2.5rem;    /* 40px */
+  --font-size-4xl:  3.5rem;    /* 56px */
+
+  --font-weight-regular: 400;
+  --font-weight-medium:  500;
+  --font-weight-semi:    600;
+  --font-weight-bold:    700;
+  --font-weight-extra:   800;
+
+  --line-height-tight:   1.2;
+  --line-height-snug:    1.4;
+  --line-height-normal:  1.6;
+  --line-height-relaxed: 1.8;
+
+  --letter-spacing-tight:  -0.02em;
+  --letter-spacing-normal:  0;
+  --letter-spacing-wide:    0.04em;
+  --letter-spacing-wider:   0.08em;
+
+  /* ----------------------------------------------------------------
+     4. BORDERS & RADII
+     ---------------------------------------------------------------- */
+  --radius-sm:   6px;
+  --radius-md:   8px;
+  --radius-lg:  12px;
+  --radius-xl:  16px;
+  --radius-2xl: 20px;
+  --radius-full: 9999px;
+
+  /* ----------------------------------------------------------------
+     5. SHADOWS (multi-layer soft)
+     ---------------------------------------------------------------- */
+  --shadow-sm:
+    0 1px 2px rgba(0, 0, 0, 0.15),
+    0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md:
+    0 4px 6px rgba(0, 0, 0, 0.15),
+    0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-lg:
+    0 10px 25px rgba(0, 0, 0, 0.2),
+    0 4px 10px rgba(0, 0, 0, 0.15);
+  --shadow-xl:
+    0 20px 40px rgba(0, 0, 0, 0.25),
+    0 8px 16px rgba(0, 0, 0, 0.15);
+  --shadow-glow:
+    0 0 20px rgba(var(--primary-rgb), 0.15),
+    0 0 40px rgba(var(--primary-rgb), 0.05);
+  --shadow-glow-accent:
+    0 0 20px rgba(var(--accent-rgb), 0.15),
+    0 0 40px rgba(var(--accent-rgb), 0.05);
+
+  /* ----------------------------------------------------------------
+     6. GLASSMORPHISM
+     ---------------------------------------------------------------- */
+  --glass-bg:       rgba(var(--surface-rgb), 0.6);
+  --glass-bg-heavy: rgba(var(--surface-rgb), 0.85);
+  --glass-blur:     blur(16px);
+  --glass-blur-lg:  blur(24px);
+  --glass-border:   1px solid rgba(var(--primary-rgb), 0.08);
+
+  /* ----------------------------------------------------------------
+     7. TRANSITIONS
+     ---------------------------------------------------------------- */
+  --transition-fast:   150ms ease;
+  --transition-base:   250ms ease;
+  --transition-slow:   400ms ease;
+  --transition-spring: 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ----------------------------------------------------------------
+     8. Z-INDEX SCALE
+     ---------------------------------------------------------------- */
+  --z-base:     1;
+  --z-dropdown: 100;
+  --z-sticky:   200;
+  --z-navbar:   500;
+  --z-modal:    1000;
+  --z-toast:    1500;
+
+  /* ----------------------------------------------------------------
+     9. LAYOUT
+     ---------------------------------------------------------------- */
+  --container-max:  1200px;
+  --container-pad:  var(--space-lg);
+  --navbar-height:  72px;
+  --section-pad-y:  var(--space-4xl);
+}
+
+/* ----------------------------------------------------------------
+   LIGHT THEME OVERRIDES
+   ---------------------------------------------------------------- */
+[data-theme="light"] {
+  /* Core palette (Bianca Style Redesign - Light) */
+  --bg-primary:       #F0F4F2;
+  --bg-surface:       #FFFFFF;
+  --bg-card:          #E8EDEA;
+  --color-primary:    #C07A3A;
+  --color-secondary:  #B8963A;
+  --color-accent:     #4A7F7C;
+  --color-border:     #C8D8D4;
+  --text-primary:     #1A1A2E;
+  --text-muted:       #4A5568;
+
+  /* Legacy derived / semantic rgb placeholders */
+  --background-rgb:  240, 244, 242;
+  --surface-rgb:     255, 255, 255;
+  --primary-rgb:     192, 122, 58;
+  --secondary-rgb:   184, 150, 58;
+  --accent-rgb:      74, 127, 124;
+  --glass-bg:        rgba(255, 255, 255, 0.6);
+  --glass-bg-heavy:  rgba(255, 255, 255, 0.85);
+  --glass-border:    1px solid rgba(var(--primary-rgb), 0.12);
+  --shadow-sm:
+    0 1px 2px rgba(0, 0, 0, 0.06),
+    0 1px 3px rgba(0, 0, 0, 0.04);
+  --shadow-md:
+    0 4px 6px rgba(0, 0, 0, 0.06),
+    0 2px 4px rgba(0, 0, 0, 0.04);
+  --shadow-lg:
+    0 10px 25px rgba(0, 0, 0, 0.08),
+    0 4px 10px rgba(0, 0, 0, 0.05);
+  --shadow-xl:
+    0 20px 40px rgba(0, 0, 0, 0.1),
+    0 8px 16px rgba(0, 0, 0, 0.06);
+}
+
+/* ================================================================
+   RESET & BASE STYLES
+   ================================================================ */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--navbar-height);
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
+  color: var(--text);
+  background-color: var(--background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
+  transition: background-color var(--transition-slow),
+              color var(--transition-slow);
+}
+
+/* Reusable glow orb — place as absolute inside each section */
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glow-orb--top-right {
+  width: 500px;
+  height: 500px;
+  top: -100px;
+  right: -100px;
+  background: radial-gradient(circle, rgba(251, 146, 60, 0.15), transparent 70%);
+}
+
+.glow-orb--bottom-left {
+  width: 400px;
+  height: 400px;
+  bottom: -80px;
+  left: -80px;
+  background: radial-gradient(circle, rgba(249, 115, 22, 0.12), transparent 70%);
+}
+
+/* ----------------------------------------------------------------
+   TYPOGRAPHY BASE
+   ---------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--text);
+}
+
+h1 { font-size: var(--font-size-4xl); }
+h2 { font-size: var(--font-size-3xl); }
+h3 { font-size: var(--font-size-2xl); }
+h4 { font-size: var(--font-size-xl);  }
+h5 { font-size: var(--font-size-lg);  }
+h6 { font-size: var(--font-size-md);  }
+
+p {
+  line-height: var(--line-height-relaxed);
+  color: var(--text-muted);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--primary);
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+/* ----------------------------------------------------------------
+   FOCUS-VISIBLE (Accessibility)
+   ---------------------------------------------------------------- */
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ----------------------------------------------------------------
+   SCROLLBAR (dark theme styled)
+   ---------------------------------------------------------------- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* ----------------------------------------------------------------
+   SELECTION
+   ---------------------------------------------------------------- */
+::selection {
+  background: rgba(var(--primary-rgb), 0.3);
+  color: var(--text);
+}
+
+/* ----------------------------------------------------------------
+   UTILITY CLASSES
+   ---------------------------------------------------------------- */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+}
+
+.section {
+  padding-block: var(--section-pad-y);
+}
+
+.section__header {
+  text-align: center;
+  margin-bottom: var(--space-3xl);
+}
+
+.section__title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-extra);
+  letter-spacing: var(--letter-spacing-wide);
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: var(--space-sm);
+}
+
+.section__subtitle {
+  font-size: var(--font-size-md);
+  color: var(--text-muted);
+  font-weight: var(--font-weight-regular);
+}
+
+.gradient-text {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ----------------------------------------------------------------
+   GLASS CARD (reusable)
+   ---------------------------------------------------------------- */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: var(--glass-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-base),
+              box-shadow var(--transition-base);
+}
+
+.glass-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg), var(--shadow-glow);
+}
+
+/* ----------------------------------------------------------------
+   RESPONSIVE BREAKPOINTS (mobile-first)
+   ---------------------------------------------------------------- */
+/* 
+  Usage in component CSS:
+  @media (min-width: 480px)  { ... }   -- small phones → landscape
+  @media (min-width: 768px)  { ... }   -- tablets
+  @media (min-width: 1024px) { ... }   -- small desktops
+  @media (min-width: 1280px) { ... }   -- large desktops
+*/
+
+/* Reduce heading sizes on mobile */
+@media (max-width: 768px) {
+  :root {
+    --font-size-4xl: 2.5rem;
+    --font-size-3xl: 2rem;
+    --font-size-2xl: 1.5rem;
+    --section-pad-y: var(--space-3xl);
+    --container-pad: var(--space-md);
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --font-size-4xl: 2rem;
+    --font-size-3xl: 1.75rem;
+    --font-size-2xl: 1.375rem;
+  }
+}

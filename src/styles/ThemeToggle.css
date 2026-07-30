@@ -1,0 +1,38 @@
+/* ================================================================
+   THEME TOGGLE STYLES
+   ================================================================ */
+
+.theme-toggle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(var(--primary-rgb), 0.12);
+  background: rgba(var(--surface-rgb), 0.5);
+  cursor: pointer;
+  color: var(--primary);
+  font-size: var(--font-size-lg);
+  transition: background var(--transition-fast),
+              border-color var(--transition-fast),
+              transform var(--transition-fast);
+  overflow: hidden;
+}
+
+.theme-toggle:hover {
+  background: rgba(var(--primary-rgb), 0.1);
+  border-color: rgba(var(--primary-rgb), 0.25);
+  transform: scale(1.05);
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
+}
+
+.theme-toggle__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

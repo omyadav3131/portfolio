@@ -1,0 +1,88 @@
+/* ================================================================
+   BUTTON COMPONENT STYLES
+   ================================================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: 14px 28px;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semi);
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: transform var(--transition-fast),
+              box-shadow var(--transition-base),
+              background var(--transition-fast),
+              border-color var(--transition-fast);
+  text-decoration: none;
+  line-height: 1;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+/* ---- Primary (filled gradient) ---- */
+.btn--primary {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: #0F172A;
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 14px 32px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 4px 20px var(--glow-primary);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(225,163,111,0.35);
+}
+
+/* ---- Outline / Secondary ---- */
+.btn--outline {
+  background: transparent;
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 13px 32px;
+  border-radius: 8px;
+  border: 1.5px solid var(--color-primary);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.btn--outline:hover {
+  background: var(--glow-primary);
+  transform: translateY(-2px);
+}
+
+/* ---- Ghost ---- */
+.btn--ghost {
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid transparent;
+  padding: 10px 20px;
+}
+
+.btn--ghost:hover {
+  color: var(--primary);
+  background: rgba(var(--primary-rgb), 0.06);
+}
+
+/* ---- Icon button ---- */
+.btn__icon {
+  display: flex;
+  align-items: center;
+  font-size: 1.1em;
+}
