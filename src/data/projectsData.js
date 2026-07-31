@@ -99,7 +99,7 @@ export const projectsData = [
             'Developed modular DAX queries to accurately compute dynamic metrics',
             'Structured the dashboard with a clear visual hierarchy and interactive slicers'
         ],
-        github: 'https://github.com/omyadav3131/PowerBI-Dashboard',
+        github: 'https://github.com/omyadav3131/powerbi-retail-revenue-analysis',
         live: null,
         featured: false
     }
