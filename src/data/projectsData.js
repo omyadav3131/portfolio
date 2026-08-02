@@ -101,7 +101,7 @@ export const projectsData = [
         ],
         github: 'https://github.com/omyadav3131/powerbi-retail-revenue-analysis',
         live: null,
-        featured: false
+        featured: true
     },
     {
         id: 'smart-budget-agent-ai',
