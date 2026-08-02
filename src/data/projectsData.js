@@ -102,5 +102,31 @@ export const projectsData = [
         github: 'https://github.com/omyadav3131/powerbi-retail-revenue-analysis',
         live: null,
         featured: false
+    },
+    {
+        id: 'smart-budget-agent-ai',
+        title: 'Smart Budget Agent AI',
+        shortDescription: 'An AI-powered personal finance assistant that categorizes expenses and provides intelligent budgeting insights.',
+        fullDescription: 'Smart Budget Agent AI is an intelligent financial tracking application. It leverages AI agents to analyze user spending habits, automatically categorize expenses, and generate personalized budgeting recommendations. The platform is designed to make financial management seamless by transforming raw transaction data into actionable financial advice.',
+        tags: ['Python', 'Artificial Intelligence', 'HTML', 'CSS'],
+        features: [
+            'AI-driven automatic expense categorization',
+            'Personalized budgeting insights and recommendations',
+            'Interactive dashboard for tracking financial health',
+            'Natural language processing for financial queries'
+        ],
+        challenges: [
+            'Accurately interpreting diverse transaction descriptions',
+            'Providing real-time AI insights without high latency',
+            'Designing an intuitive user experience for financial data'
+        ],
+        solutions: [
+            'Integrated an AI agent to parse and categorize transactions contextually',
+            'Optimized data processing pipelines for rapid response times',
+            'Built a responsive HTML/CSS interface focused on readability'
+        ],
+        github: 'https://github.com/omyadav3131/Smart-Budget-Agent-AI',
+        live: null,
+        featured: true
     }
 ];
