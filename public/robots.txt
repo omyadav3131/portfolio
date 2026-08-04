@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://omyadav.dev/sitemap.xml
+Sitemap: https://omyadav-portfolio.vercel.app/sitemap.xml
