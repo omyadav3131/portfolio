@@ -23,22 +23,7 @@ function Education() {
       type: 'CGPA 7.5',
       description: [],
     },
-    {
-      title: 'Higher Secondary - Science (PCMB)',
-      company: 'Maharashtra Board',
-      period: '2021 – 2022',
-      location: 'Maharashtra',
-      type: 'Percentage 58%',
-      description: [],
-    },
-    {
-      title: 'Secondary Education',
-      company: 'Maharashtra Board',
-      period: '2019 – 2020',
-      location: 'Maharashtra',
-      type: 'Percentage 81.40%',
-      description: [],
-    }
+
   ];
 
   return (
