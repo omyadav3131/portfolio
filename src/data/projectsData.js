@@ -128,5 +128,31 @@ export const projectsData = [
         github: 'https://github.com/omyadav3131/Smart-Budget-Agent-AI',
         live: null,
         featured: true
+    },
+    {
+        id: 'seasonal-agriculture-analysis',
+        title: 'Seasonal Agriculture Performance Analysis',
+        shortDescription: 'Data analytics project analyzing 4,000 agricultural farm records to provide insights for seasonal, crop, and irrigation decisions.',
+        fullDescription: 'Developed as part of the VOIS Data Analytics Major Project, this analytics solution evaluates agricultural performance across 4,000 farm records and 28 variables. The project explores the impact of seasons, crops, irrigation methods, and environmental conditions on yield and profitability. By employing rigorous data preparation and statistical analysis, it transforms raw agricultural data into actionable insights for resource management and crop selection.',
+        tags: ['Python', 'Pandas', 'Seaborn', 'Data Analytics', 'Google Colab'],
+        features: [
+            'Comprehensive analysis of 4,000 agricultural farm records across 28 variables',
+            'Evaluation of crop and seasonal performance metrics including yield and profit',
+            'Statistical analysis of environmental factors and irrigation water efficiency',
+            'Data preparation pipelines handling missing values through group-based median imputation'
+        ],
+        challenges: [
+            'Cleaning and standardizing a complex dataset with missing and diverse values',
+            'Analyzing multidimensional data encompassing environmental and economic variables',
+            'Identifying actionable patterns across different crops, seasons, and irrigation methods'
+        ],
+        solutions: [
+            'Implemented group-based median imputation to address missing numerical data',
+            'Utilized Pandas and Seaborn for comprehensive statistical analysis and visualization',
+            'Developed targeted metrics to evaluate profitability and water efficiency accurately'
+        ],
+        github: 'https://github.com/omyadav3131/Seasonal-Agriculture-Performance-Analysis',
+        live: null,
+        featured: true
     }
 ];
