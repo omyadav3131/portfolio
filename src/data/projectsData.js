@@ -3,12 +3,12 @@ export const projectsData = [
         id: 'repodoctor',
         title: 'RepoDoctor – GitHub Repository Quality Analyzer',
         shortDescription: 'Full-stack GitHub repository analyzer with a 6-dimensional scoring engine evaluating code quality, commit hygiene, and documentation.',
-        fullDescription: 'RepoDoctor is a comprehensive full-stack GitHub repository analyzer equipped with a robust 6-dimensional scoring engine. It evaluates code quality, commit hygiene, documentation standards, and more to provide actionable insights for developers. By implementing parallel asynchronous file fetching with CompletableFuture, it rapidly analyzes over 15 repositories in just 4–10 seconds, culminating in the generation of professional PDF analysis reports.',
+        fullDescription: 'RepoDoctor is a comprehensive full-stack GitHub repository analyzer equipped with a robust 6-dimensional scoring engine. It evaluates code quality, commit hygiene, documentation standards, and more to provide actionable insights for developers. By implementing parallel asynchronous file fetching with asyncio, it rapidly analyzes over 15 repositories in just 4–10 seconds, culminating in the generation of professional PDF analysis reports.',
         tags: ['Python 3', 'FastAPI', 'React 18', 'SQLAlchemy', 'ReportLab', 'Vercel', 'Render'],
         features: [
             '6-dimensional scoring engine for comprehensive repository evaluation',
             'Parallel asynchronous file fetching reducing analysis time to seconds',
-            'Automated generation of professional PDF analysis reports with JFreeChart',
+            'Automated generation of professional PDF analysis reports with Matplotlib',
             'Interactive React-based dashboard for reviewing repository metrics'
         ],
         challenges: [
@@ -17,7 +17,7 @@ export const projectsData = [
             'Generating complex PDF reports seamlessly on the backend'
         ],
         solutions: [
-            'Implemented CompletableFuture for parallel asynchronous GitHub API requests',
+            'Implemented asyncio for parallel asynchronous GitHub API requests',
             'Developed a standardized heuristic scoring model based on best practices',
             'Integrated ReportLab and Matplotlib to dynamically construct visual reports'
         ],
