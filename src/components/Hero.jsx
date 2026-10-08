@@ -140,7 +140,7 @@ function Hero() {
             theme === "dark" ? "text-[#aed9e0]/90" : "text-[#5e6472]/80"
           }`}
         >
-          Java Developer & Data Analyst
+          Python Developer & Data Analyst
         </motion.p>
 
         {/* Decorative line */}

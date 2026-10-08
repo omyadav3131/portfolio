@@ -167,11 +167,11 @@ function AboutMe() {
                                 }`}
                         >
                             <p className="text-xl md:text-2xl font-light">
-                                I'm a Software Developer and Data Analyst with a strong foundation in Java, Python, SQL, Pandas, and Machine Learning.
+                                I'm a Software Developer and Data Analyst with a strong foundation in Python, Advanced Python, SQL, Pandas, and Machine Learning.
                             </p>
 
                             <p className="text-base md:text-lg opacity-90">
-                                I thrive on building scalable backend systems and extracting meaningful insights from complex datasets. Built and deployed RepoDoctor — a full-stack GitHub repository analyzer — demonstrating hands-on backend development and system design skills. Skilled in data cleaning, dashboard development, and exploratory analysis. Seeking opportunities in software development or data analytics roles to deliver data-driven, practical solutions.
+                                I thrive on building scalable backend systems and extracting meaningful insights from complex datasets. Built and deployed RepoDoctor — a full-stack GitHub repository analyzer — demonstrating hands-on backend development in Python and system design skills. Skilled in data cleaning, dashboard development, and exploratory analysis. Seeking opportunities in software development or data analytics roles to deliver data-driven, practical solutions.
                             </p>
                         </motion.div>
                     </motion.div>

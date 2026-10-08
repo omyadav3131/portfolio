@@ -103,7 +103,7 @@ function Projects() {
                         className={`text-lg max-w-2xl mx-auto ${theme === "dark" ? "text-[#aed9e0]" : "text-[#5e6472]"
                             } opacity-90`}
                     >
-                        Here are some of my recent projects that showcase my skills and passion for Data Analytics & Java Devloper
+                        Here are some of my recent projects that showcase my skills and passion for Data Analytics & Python Developer
                     </motion.p>
                 </motion.div>
 

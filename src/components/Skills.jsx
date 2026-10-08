@@ -10,8 +10,7 @@ function Skills() {
         title: 'Programming Languages',
         icon: Cpu,
         skills: [
-            'Java',
-            'Python',
+                        'Python',
             'C',
             'JavaScript'
         ]
@@ -20,7 +19,7 @@ function Skills() {
         title: 'Backend',
         icon: Server,
         skills: [
-            'Spring Boot',
+            'FastAPI',
             'Flask',
             'SQLAlchemy',
             'REST APIs'
