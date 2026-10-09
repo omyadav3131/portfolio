@@ -64,3 +64,14 @@ body {
   z-index: 0;
   background: transparent !important;
 }
+
+/* ─── Scrollbar hidden ─────────────────────────────────────────────────────
+   Hide scrollbar globally while still allowing scroll */
+::-webkit-scrollbar {
+  display: none;
+}
+
+html, body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
